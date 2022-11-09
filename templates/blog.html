@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color: black;">
+    
+
+    <a href="/sign-up">
+
+        <button style="color: black ; background-color: white; border-radius: 20px; font-size: x-large; margin-left: 1100px;">REGISTER</button>
+
+    </a>
+
+        <br><br>
+
+
+    <a href="/login">
+
+        <button style="color: black ; background-color: white; border-radius: 20px; font-size: x-large; margin-left: 1100px;">LOG IN</button>
+
+    </a>
+
+    <a href="/dashboard">
+
+        <button style="color: black ; background-color: white; border-radius: 20px; font-size: x-large;">GO TO YOUR DASHBOARD</button>
+    </a>
+
+
+
+    <div style="background-color: black; border-radius: 50px; text-align: center;">
+        <h1 style="color: gold; text-shadow: 20px; font-size: 100px; font-family: sans-serif; font-weight: bolder ;">
+            METAL SPEED </h1>
+    </div>
+
+    <hr style="width: 1000px; height: 10px; background-color: rgb(245, 76, 188); border-radius: 20px;">
+
+
+    <h5 style="font-size: 20px; font-family: cursive; background-color: azure; color: black; text-align: center;">Exotic
+         cars with a touch of feminity. Experience luxury at the click of a button <i class="fa fa-envelope"></i></h5>
+    
+        <hr style="width: 1000px; height: 10px; background-color: gold; border-radius: 20px;">
+    
+        <br><br>
+
+<h3 style="font-size: 20px; width: 200px; margin-left:290px; font-family: cursive; background-color: rgb(245, 76, 188); border-radius: 30px; color: black; text-align: center;">ABOUT</h3>
+
+<p style="background-color:gold ;margin-left:290px ; text-align:center; font-weight: 800; width: 1000px; height: 100px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus ut error obcaecati nostrum cumque fugit eligendi eaque explicabo necessitatibus vel!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus ut error obcaecati nostrum cumque fugit eligendi eaque explicabo necessitatibus vel!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus ut error obcaecati nostrum cumque fugit eligendi eaque explicabo necessitatibus vel!</p>
+
+<h3 style="font-size: 20px; font-family: cursive; background-color: rgb(245, 76, 188); color: black; text-align: center;">POSTS</h3>
+
+
+{% for item in post %}
+        <div style="display: inline-block; margin-left: 35px">
+
+            <a href="/post/{{item.id}}">
+                <img style="height: 180px; width: 350px; border-radius: 30px;" src="/uploads/{{item.image}}" alt="image">
+            </a>
+
+            <a href="/post/{{item.id}}">
+                <div>
+                    <h4 style="color:aliceblue; font-family: 'Times New Roman', Times, serif; font-weight: bold; border-radius: 20px;">
+                        {{item.title}}<br> </h4>
+                </div>
+            </a>       
+            
+            </div>
+
+        </div>
+    {% endfor %}
+
+
+<div style="display: flex;">
+
+        
+</div>
+
+<div style="text-align: center;">
+
+    <a href="/logout">
+
+        <button style="color: black ; background-color: white; border-radius: 20px; font-size: x-large;">LOG OUT</button>
+    </a>
+
+</div>
+
+<h3 style="font-size: 20px; font-family: cursive; background-color: rgb(245, 76, 188); color: black; text-align: center;">CONTACT US</h3>
+
+<div style="display: inline-grid; text-align:center; margin-left:740px;">
+
+    <a href="tel:0990202002">
+
+        <button style="color: black ; background-color: white; border-radius: 20px; font-size: x-large;"><i class="fa fa-phone"></i>PHONE</button>
+
+    </a>
+
+    <br><br>
+
+    <a href="mailto:gg@yahoo.com">
+
+        <button style="color: black ; background-color: white; border-radius: 20px; font-size: x-large;"><i class="fa fa-envelope"></i>EMAIL</button>
+    </a>
+
+</div>
+
+</body>
+</html>

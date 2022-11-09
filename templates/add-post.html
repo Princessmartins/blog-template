@@ -1,0 +1,43 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add post</title>
+</head>
+
+<body style="background-color: black;">
+<div>
+    <div style="background-color: rgb(245, 76, 188); border-radius: 50px; text-align: center;">
+        <h1 style="color: gold; text-shadow: 20px; font-size: 50px; font-family: sans-serif; font-weight: bolder;">
+      ADD POST</h1>
+    </div>
+        
+        
+        <div style="color: red; margin: 5px; text-align: center;">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <b>{{ message }}</b>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <div style="text-align: center;">
+            <form method="post" action="/add-post" enctype="multipart/form-data">
+                <input style="height: 50px; width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ;" type="text" name="title" placeholder="Enter title">
+                <br/><br>
+                
+                <input style="height: 50px; width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ;" type="text" name="category" placeholder="Enter category">
+                <br/><br>
+                <textarea rows="10" style="width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ;" name="description" rows="3">Enter post description.</textarea>
+                <br><br>
+                <input style="height: 50px; width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ; color: aliceblue;" type="file" name="picture">
+                <br/><br><br><br><br><br>
+                <button type="submit" style="color:black ; background-color:gold ; border-radius: 20px; font-size: larger;">SUBMIT</button>
+            </form>
+        </div>
+    
+</div>
+</body>
+</html>

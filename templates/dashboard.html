@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body style="background-color: black;">
+
+   
+    <br><br>
+
+    <a href="/logout">
+        <button style="color: rgb(245, 76, 188) ; background-color: white; border-radius: 20px; font-size: large; margin-left: 1120px;">LOG OUT</button>
+    </a>
+    
+    <a href="/add-new-post">
+        <button style="color: rgb(245, 76, 188) ; background-color: white; border-radius: 20px; font-size: large; margin-left: 1120px;">ADD NEW POST</button>
+    </a>
+
+    <div style="background-color: rgb(245, 76, 188); border-radius: 50px; text-align: center;">
+        <h1 style="color: gold; text-shadow: 20px; font-size: 50px; font-family: sans-serif; font-weight: bolder ;">
+      WELCOME TO YOUR DASHBOARD, {{profile.username}}</h1>
+
+    </div>
+
+    <hr style="width: 1000px; height: 10px; background-color: gold; border-radius: 20px;">
+
+    <br><br>
+    {% for item in post %}
+        <div style="display: inline-block; margin-left: 35px">
+
+
+                <img style="height: 180px; width: 350px; border-radius: 30px;" src="/uploads/{{item.image}}" alt="image">
+
+                <div style="margin-left: 100px ;">
+                        <h4 style="background-color: gold; width: 120px; font-family: 'Times New Roman', Times, serif; font-weight: bold; border-radius: 20px; text-align: center;">
+                        {{item.title}}<br> </h4>
+                </div>
+                        
+                <div style="margin-left: 100px ;">
+                    <a href="/edit/{{item.id}}">
+                        <button 
+                            style="color: black ; background-color: rgb(245, 76, 188); border-radius: 20px;">EDIT</button>
+                    </a>
+
+                    <a href="/delete/{{item.id}}">
+                        <button style="color:black ; background-color: rgb(245, 76, 188); border-radius: 20px;">DELETE</button>
+                    </a>
+
+            
+
+            </div>
+
+        </div>
+    {% endfor %}
+
+    </div>      
+
+</body>
+
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body style="background-color: black;">
+    
+ <h1 style="color: gold; text-shadow: 20px; font-size: 50px; font-family: sans-serif; font-weight: bolder ; text-align: center;">
+        LOG IN PAGE</h1>
+
+        <hr style="width: 1000px; height: 10px; background-color: rgb(245, 76, 188) ; border-radius: 20px;">
+
+        <br><br>
+
+    <div style="text-align: center;">
+
+            <p style="color: green;">
+
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <b>{{ message }}</b>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+
+            </p>
+          
+    </div>
+
+    <div  style="text-align: center;">
+
+        <form method="post" action="/login">
+
+            <div class="form-group">
+                <input name="email" class="form-control" style="height: 50px; width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ;" type="email"
+                placeholder="Enter your Email here">
+            </div>
+
+            <br><br><br><br>
+
+            <div class="form-group">
+             <input name="password" class="form-control" style="height: 50px; width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ;" type="password"
+             placeholder="Enter your Password here">
+            </div>
+
+         <br>
+
+            <button type="submit" style="color:black ; background-color:gold ; border-radius: 20px; font-size: larger;">LOG IN</button>
+
+        </form>
+
+        <br><br><br><br>
+
+        
+
+        <br><br><br>
+
+        
+
+        <a style="color: rgb(245, 76, 188); font-size: medium; font-family: cursive;" href="/sign-up">Or register here to create an account</a>
+
+        
+        
+                    
+                
+
+    </div>
+
+</body>
+
+
+</html>

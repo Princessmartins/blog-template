@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body style="background-color: gold;">
+    
+ <h1 style="color: black; text-shadow: 20px; font-size: 50px; font-family: sans-serif; font-weight: bolder ; text-align: center;">
+        REGISTRATION PAGE</h1>
+
+<hr style="width: 1000px; height: 10px; background-color: rgb(245, 76, 188) ; border-radius: 20px;">
+
+    <br><br>
+
+<form method='post' action="/registration">
+
+    <div style="text-align: center;">
+
+        <div class="form-group">
+            <input name='email' class="form-control" style="height: 50px; width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ;" type="email"
+            placeholder="Enter your Email here">
+        </div>
+
+            <br><br><br><br>
+
+        <div class="form-group">
+            <input name= "username" class="form-control" style="height: 50px; width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ;" type="text"
+            placeholder="Enter your Username here">
+        </div>
+
+        <br><br><br><br>
+
+        <div class="form-group">
+            <input name="password" class="form-control" style="height: 50px; width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ;" type="password"
+            placeholder="Enter your Password here">
+        </div>
+
+            <br><br><br><br>
+
+        <div class="form-group">
+            <input name="confirm password" class="form-control" style="height: 50px; width: 500px; border-radius: 20px; border:0.5px solid; border-color:rgb(245, 76, 188) ;" type="password"
+            placeholder="Confirm Password">
+        </div>
+
+            <br>
+
+        <button type="submit" name="submit" style="color:black ; background-color:rgb(245, 76, 188) ; border-radius: 20px; font-size: larger;">REGISTER</button>
+
+    </div>
+
+</form>
+
+        
+    <div style="text-align: center;">
+
+        <p style="color: green;">
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <b>{{ message }}</b>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+        </p>
+      
+    </div>
+
+    <br><br><br><br>
+
+       
+    <br><br><br>
+
+    
+    <div style="text-align: center;">
+
+        <a style="color: black; font-size: medium; font-family: cursive;" href="/login">Or Click here to 
+            <button style="color: rgb(245, 76, 188) ; background-color:black ; border-radius: 20px; font-size: small;">LOG IN</button>
+                 if you already have an account</a>
+    
+
+    </div>
+    
+
+
+        
+                    
+                
+
+    
+
+</body>
+
+
+</html>
